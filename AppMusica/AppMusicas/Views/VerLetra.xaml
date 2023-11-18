@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMusicas.Views.VerLetra"
+             Title="Letra de tu tema favorito">
+    <VerticalStackLayout HorizontalOptions="Center">
+        <Label 
+            Text="LETRA DE LA CANCIÓN SELECCIONADA"
+            HorizontalOptions="Center"
+            FontSize="Title"
+            
+            />
+
+        <ScrollView  HeightRequest="550" 
+                     HorizontalOptions="Center"
+                     Margin="5"
+                     VerticalOptions="Center">
+
+            
+            <Label 
+            Text= "{Binding letra_cancion}"
+            x:Name="MostrarLetra"
+                FontSize="Small"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                    
+              />
+
+        </ScrollView>
+
+
+    </VerticalStackLayout>
+</ContentPage>

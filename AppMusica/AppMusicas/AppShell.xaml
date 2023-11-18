@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AppMusicas.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:AppMusicas.Views"
+    xmlns:local="clr-namespace:AppMusicas"
+    FlyoutBackgroundImage="play.jpeg"
+    FlyoutBackgroundImageAspect="AspectFill"
+    FlyoutHeaderBehavior="CollapseOnScroll">
+
+    <Shell.FlyoutHeader>
+        <views:NavBarMenu />
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <views:FooterMenu />
+    </Shell.FlyoutFooter>
+
+    <FlyoutItem Route="nuestra_app" FlyoutDisplayOptions="AsMultipleItems">
+        
+
+        <ShellContent
+            Title="Indice"
+            ContentTemplate="{DataTemplate views:InicioApp}"
+            Route="indice" />
+
+
+
+        <ShellContent
+            Title="agregar tema musical"
+            ContentTemplate="{DataTemplate views:AgregarMusica}"
+            Route="agregarMusica" />
+    </FlyoutItem>
+    <MenuItem Text="Cerrar sesión"
+              IconImageSource="exit.png"
+              Clicked="MenuItem_Clicked"
+              />
+
+
+</Shell>

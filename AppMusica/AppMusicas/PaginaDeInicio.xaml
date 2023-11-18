@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMusicas.Views.PaginaDeInicio"           
+               Title="Pagina de Inicio">
+
+    <VerticalStackLayout Spacing="10" >
+        <Label 
+            Text="AppMusicas" 
+            FontFamily="Kanit-Bold"
+            FontSize="20"
+            VerticalOptions="Start" 
+            HorizontalOptions="Center" />
+
+
+
+        <StackLayout >
+            
+            <CarouselView x:Name="carouselView" ItemsSource="{Binding Musicas}"  HeightRequest="300" >
+
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="20" />
+                </CarouselView.ItemsLayout> 
+
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Spacing="20">
+                          
+                            <Image Source="{Binding portada_url}" 
+                                   WidthRequest="100"
+                                   HeightRequest="200"
+                                   Aspect="AspectFill"
+                                   HorizontalOptions="Center"/>
+                            <Label FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" Text="{Binding nombre}"/>
+                            <Label FontSize="Small" FontAttributes="Bold" HorizontalTextAlignment="Center" Text="{Binding artista}"/>
+                            
+
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+
+            </CarouselView>
+
+            <StackLayout>
+
+                <IndicatorView x:Name="indicatorView" Margin="10" HorizontalOptions="Center" IndicatorColor="Aquamarine" ></IndicatorView>
+
+            </StackLayout>
+
+
+        </StackLayout>
+
+
+        <Button
+                   
+                x:Name="VolverBtn"
+                Text=" VOLVER"                    
+                Clicked="VolverBtn_Clicked_1"
+                Style="{StaticResource EstiloBoton}"                            
+                Margin="5"
+                  
+                />
+
+
+
+
+
+
+
+
+
+    </VerticalStackLayout>
+
+  
+ 
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+         
+
+        
+
+</ContentPage>

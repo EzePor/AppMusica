@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMusicas.Views.InicioApp"
+             Title="InicioApp">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10"  >
+            <Label 
+            Text="Reproductor Multimedia"
+        FontSize="Title"
+            VerticalOptions="Start" 
+            HorizontalOptions="Center" />
+            
+            <Grid ColumnDefinitions="2*,2*,2*" RowDefinitions="*,*"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
+                <Button
+                   
+                x:Name="VerVideoBtn"
+                Text=" Ver Video"                    
+                Clicked="VerVideoBtn_Clicked"
+                Style="{StaticResource EstiloBoton}"
+                Grid.Row="0"
+                Grid.Column="0"
+                    
+                Margin="5"
+                  
+                />
+              
+
+
+                <Button
+                x:Name="PaginaInicioBtn"
+                Text="Página Inicio"
+                Clicked="AbrirPaginaInicio"
+                Style="{StaticResource EstiloBotonDestacado}"
+                Grid.Row="0"
+                Grid.Column="1"
+                    Margin="5"
+                />
+
+
+
+                <Button
+                x:Name="AgregarMusicaBtn"
+                Text=" Agregar tema "              
+                Clicked="AgregarMusicaBtn_Clicked"
+                Style="{StaticResource EstiloBoton}"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Margin="5"
+                />
+
+                <Button
+                   
+                x:Name="VerLetraBtn"
+                Text=" Ver Letra"                    
+                Clicked="VerLetraBtn_Clicked"
+                Style="{StaticResource EstiloBoton}"
+                Grid.Row="1"
+                Grid.Column="0"
+                    
+                Margin="5"
+                  
+                />
+
+
+                <Button
+                x:Name="EliminarMusicaBtn"
+                Text=" Eliminar"              
+                Clicked="EliminarMusicaBtn_Clicked"
+                Style="{StaticResource EstiloBoton}"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="5"
+                />
+                <Button
+                x:Name="EditarMusicaBtn"
+                Text=" Editar Tema"              
+                Clicked="EditarMusicaBtn_Clicked"
+                Style="{StaticResource EstiloBoton}"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Margin="5"
+                    />
+
+
+            </Grid>
+
+            <ScrollView HeightRequest="550" >
+                
+                <CollectionView x:Name= "MusicasCollectionView"
+                 SelectionMode="Single" >
+
+
+                    <CollectionView.ItemTemplate >
+                        <DataTemplate  >
+                            <Grid Padding="10"  RowDefinitions="1.5*,1.2*,*" ColumnDefinitions="*,2*,2*">
+                                <Image Margin="5" Grid.Row="0" 
+                       Grid.Column="0" 
+                       Grid.RowSpan="3"
+                       Source="{Binding portada_url}"/>
+                       <Label FontFamily="Oswald" 
+                       
+                       Grid.Row="0" 
+                       Grid.Column="1" 
+                       Grid.ColumnSpan="3" 
+                       Text="{Binding artista}" 
+                       FontSize="22"/>
+                                <Label FontFamily="Ubuntu-media" Grid.Row="1" 
+                       Grid.Column="1" 
+                       Grid.ColumnSpan="2" 
+                       Text="{Binding nombre}" 
+                       FontSize="18"/>
+                                <Label FontFamily="Bbn-regular" Grid.Row="2" 
+                       Grid.Column="1"  
+                       Text="{Binding genero}" />
+                                <Label FontFamily="Bbn-regular" Grid.Row="2" 
+                       Grid.Column="2"  
+                       Text="{Binding duracion}" />
+
+                            </Grid>
+                            
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </ScrollView>
+
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

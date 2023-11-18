@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMusicas.Views.ReproductorVideo"
+             Title="ReproductorVideo">
+    <VerticalStackLayout>
+        <Label 
+            Text="REPRODUCE TU VIDEO MUSICAL FAVORITO"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <WebView x:Name="ReproductorWebWiew" HeightRequest="500" ></WebView>
+    </VerticalStackLayout>
+</ContentPage>
