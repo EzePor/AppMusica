@@ -13,7 +13,7 @@ public partial class IniciarSesion : ContentPage
 	{
 		InitializeComponent();
         _clientAuth = firebaseAuthClient;
-        _userRepository = new FileUserRepository("AppMusicas");
+        _userRepository = new FileUserRepository("Musica");
 
         ChequearSiHayUsuarioAlmacenado();
     }

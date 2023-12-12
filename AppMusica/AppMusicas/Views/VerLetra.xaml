@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMusicas.Views.VerLetra"
              Title="Letra de tu tema favorito">
-    <VerticalStackLayout HorizontalOptions="Center">
+    <VerticalStackLayout HorizontalOptions="Center" BackgroundColor="#F7B548" >
         <Label 
-            Text="LETRA DE LA CANCIÓN SELECCIONADA"
+            Text="Letra del tema seleccionado"
+            FontAttributes="Bold"
             HorizontalOptions="Center"
-            FontSize="Title"
+            FontSize="Medium"
             
             />
 
@@ -21,6 +22,7 @@
             Text= "{Binding letra_cancion}"
             x:Name="MostrarLetra"
                 FontSize="Small"
+                FontAttributes="Bold"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                     

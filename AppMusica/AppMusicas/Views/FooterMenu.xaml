@@ -4,7 +4,7 @@
              x:Class="AppMusicas.Views.FooterMenu">
     <VerticalStackLayout>
         <Label 
-            Text="Práctica Profesionalizante I -2023"
+            Text="Miltimedia 2023"
             FontSize="Medium"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />

@@ -7,34 +7,38 @@
     xmlns:local="clr-namespace:AppMusicas"
     FlyoutBackgroundImage="play.jpeg"
     FlyoutBackgroundImageAspect="AspectFill"
-    FlyoutHeaderBehavior="CollapseOnScroll">
+    FlyoutHeaderBehavior="CollapseOnScroll"
+    
+    >
 
-    <Shell.FlyoutHeader>
-        <views:NavBarMenu />
+    <Shell.FlyoutHeader  >
+        <views:NavBarMenu   />
     </Shell.FlyoutHeader>
 
     <Shell.FlyoutFooter>
         <views:FooterMenu />
     </Shell.FlyoutFooter>
 
-    <FlyoutItem Route="nuestra_app" FlyoutDisplayOptions="AsMultipleItems">
+    <FlyoutItem Route="nuestra_app" FlyoutDisplayOptions="AsMultipleItems"    >
         
 
         <ShellContent
-            Title="Indice"
+            Title="ÍNDICE"
+            
             ContentTemplate="{DataTemplate views:InicioApp}"
             Route="indice" />
 
 
 
         <ShellContent
-            Title="agregar tema musical"
+            Title="AGREGAR TEMA MUSICAL"
             ContentTemplate="{DataTemplate views:AgregarMusica}"
             Route="agregarMusica" />
     </FlyoutItem>
-    <MenuItem Text="Cerrar sesión"
+    <MenuItem Text="CERRAR SESIÓN"
+              
               IconImageSource="exit.png"
-              Clicked="MenuItem_Clicked"
+              Clicked="MenuItem_Clicked_1"
               />
 
 

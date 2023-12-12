@@ -2,12 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMusicas.Views.IniciarSesion"
-             Title="IniciarSesion">
-    <ScrollView>
-        <VerticalStackLayout  Margin="20" >
+             Title="Iniciar Sesion"
+            NavigationPage.HasNavigationBar="False">
+    
+    <ScrollView BackgroundColor="#F7B548">
+        <VerticalStackLayout Spacing="1"  Margin="2" HorizontalOptions="Center" VerticalOptions="Center">
             <Label 
-            Text="Inicio de sesión en AppMusica"
-            FontSize="Title"
+            Text="Inicio de sesión AppMusica"
+                FontAttributes="Bold"
+            FontSize="Small"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
             <Grid 
@@ -36,11 +39,12 @@
                 </CheckBox>
 
                 <Label Grid.Row="2" Grid.Column="1"
-                       VerticalOptions="Center">Recordad contraseña</Label>
+                       VerticalOptions="Center">Recordar contraseña</Label>
 
                 <Button Text="Iniciar sesión"
                         x:Name="btnIniciarSesion"
                         Grid.Row="3" Grid.Column="0"
+                        Style="{StaticResource EstiloBoton}"
                         Clicked="btnIniciarSesion_Clicked" 
                         Grid.ColumnSpan="2"
                         Margin="5"
@@ -49,6 +53,7 @@
                 <Button Text="Registrarse"
                         x:Name="btnRegistrarse"
                         Grid.Row="4" Grid.Column="0"
+                        Style="{StaticResource EstiloBoton}"
                         Clicked="btnRegistrarse_Clicked" 
                         Grid.ColumnSpan="2"
                         Margin="5"

@@ -89,6 +89,9 @@
 	  <MauiXaml Update="Views\NavBarMenu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\ReproducirTema.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\ReproductorVideo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

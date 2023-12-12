@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMusicas.Views.CrearCuenta"
-             Title="CrearCuenta">
-    <ScrollView>
-        <VerticalStackLayout Margin="20">
+             Title="Crear Cuenta">
+    <ScrollView  BackgroundColor="#F7B548" >
+        <VerticalStackLayout Margin="10">
             <Label 
             FontSize="Title"
             Text="Nueva cuenta en Reproductor Multimedia"
@@ -40,6 +40,7 @@
                        IsPassword="true"></Entry>
 
                 <Button Text="Crear cuenta"
+                         Style="{StaticResource EstiloBoton}"
                         x:Name="btnCrearCuenta"
                         Grid.Row="3" Grid.Column="0"
                         Clicked="btnCrearCuenta_Clicked"     

@@ -2,13 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMusicas.Views.InicioApp"
-             Title="InicioApp">
+             Title=" Reproductor Multimedia">
 
     <ScrollView>
-        <VerticalStackLayout Spacing="10"  >
+        <VerticalStackLayout Spacing="10"  BackgroundColor="black" >
             <Label 
             Text="Reproductor Multimedia"
-        FontSize="Title"
+            FontSize="Title"
+             TextColor="White"
+                FontAttributes="Bold"
             VerticalOptions="Start" 
             HorizontalOptions="Center" />
             
@@ -17,7 +19,8 @@
                 <Button
                    
                 x:Name="VerVideoBtn"
-                Text=" Ver Video"                    
+                Text=" Ver Video"   
+                FontAttributes="Bold"
                 Clicked="VerVideoBtn_Clicked"
                 Style="{StaticResource EstiloBoton}"
                 Grid.Row="0"
@@ -31,7 +34,8 @@
 
                 <Button
                 x:Name="PaginaInicioBtn"
-                Text="Página Inicio"
+                Text="Portadas"
+                FontAttributes="Bold"
                 Clicked="AbrirPaginaInicio"
                 Style="{StaticResource EstiloBotonDestacado}"
                 Grid.Row="0"
@@ -43,7 +47,8 @@
 
                 <Button
                 x:Name="AgregarMusicaBtn"
-                Text=" Agregar tema "              
+                Text=" Agregar tema "  
+                FontAttributes="Bold"
                 Clicked="AgregarMusicaBtn_Clicked"
                 Style="{StaticResource EstiloBoton}"
                     Grid.Row="0"
@@ -54,7 +59,8 @@
                 <Button
                    
                 x:Name="VerLetraBtn"
-                Text=" Ver Letra"                    
+                Text=" Ver Letra" 
+                FontAttributes="Bold"
                 Clicked="VerLetraBtn_Clicked"
                 Style="{StaticResource EstiloBoton}"
                 Grid.Row="1"
@@ -67,7 +73,8 @@
 
                 <Button
                 x:Name="EliminarMusicaBtn"
-                Text=" Eliminar"              
+                Text=" Eliminar" 
+                FontAttributes="Bold"
                 Clicked="EliminarMusicaBtn_Clicked"
                 Style="{StaticResource EstiloBoton}"
                     Grid.Row="1"
@@ -76,7 +83,8 @@
                 />
                 <Button
                 x:Name="EditarMusicaBtn"
-                Text=" Editar Tema"              
+                Text=" Editar Tema" 
+                FontAttributes="Bold"
                 Clicked="EditarMusicaBtn_Clicked"
                 Style="{StaticResource EstiloBoton}"
                     Grid.Row="1"
@@ -86,6 +94,13 @@
 
 
             </Grid>
+
+            <Button 
+                x:Name="ReproducirTemaBtn"
+                 Text="Reproducir Tema"
+                FontAttributes="Bold"
+                Clicked="ReproducirTemaBtn_Clicked"
+                Style="{StaticResource EstiloBoton}"/>
 
             <ScrollView HeightRequest="550" >
                 
@@ -106,16 +121,21 @@
                        Grid.Column="1" 
                        Grid.ColumnSpan="3" 
                        Text="{Binding artista}" 
+                        TextColor="White"
                        FontSize="22"/>
                                 <Label FontFamily="Ubuntu-media" Grid.Row="1" 
                        Grid.Column="1" 
                        Grid.ColumnSpan="2" 
                        Text="{Binding nombre}" 
+                        TextColor="White"
                        FontSize="18"/>
                                 <Label FontFamily="Bbn-regular" Grid.Row="2" 
                        Grid.Column="1"  
-                       Text="{Binding genero}" />
-                                <Label FontFamily="Bbn-regular" Grid.Row="2" 
+                       Text="{Binding genero}" 
+                         TextColor="White"   />
+                                <Label FontFamily="Bbn-regular"
+                                        TextColor="White"
+                                       Grid.Row="2" 
                        Grid.Column="2"  
                        Text="{Binding duracion}" />
 

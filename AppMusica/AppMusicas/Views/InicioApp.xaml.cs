@@ -1,6 +1,6 @@
 using AppMusicas.Modelos;
 using AppMusicas.Repositories;
-
+using System.ComponentModel;
 using Microsoft.Maui.Controls;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Linq.Expressions;
 using System.Security.Cryptography.X509Certificates;
 using System.Text.Json.Serialization;
+using System.Runtime.CompilerServices;
 
 namespace AppMusicas.Views;
 
@@ -74,9 +75,9 @@ public partial class InicioApp : ContentPage
     }
 
     //método! inicio de la página.. donde hacemos que carguen los temas con getAllMusicas..
-    protected async override void OnAppearing()
+    protected  override void OnAppearing()
     {
-        base.OnAppearing();
+         base.OnAppearing();
         //Debug.Print("<<<<<<<<<<<<<<<<Se ha cargado la pantalla que muestra la lista de los temas>>>>>>>>>>>>>>");
         NetworkAccess conexionInternet = Connectivity.Current.NetworkAccess;
 		if(conexionInternet == NetworkAccess.Internet)
@@ -94,7 +95,7 @@ public partial class InicioApp : ContentPage
 		return false;
 	}
 
-    protected override void OnDisappearing()
+    protected  override void OnDisappearing()
     {
 		Debug.Print("<<<<<<<<<<Se ha cerrado la ventana de la lista de los temas musicales>>>>>>>>>>>");
     }
@@ -156,7 +157,7 @@ public partial class InicioApp : ContentPage
 		}
 		else
 		{
-            await Application.Current.MainPage.DisplayAlert("Editar", "ERROR: Debe seleccionar el video musical que quiere reproducir ", "OK");
+            await Application.Current.MainPage.DisplayAlert("Atención !", "ERROR: Debe seleccionar el video musical que quiere reproducir ", "OK");
         }
     }
 
@@ -168,7 +169,19 @@ public partial class InicioApp : ContentPage
         }
         else
         {
-            await Application.Current.MainPage.DisplayAlert("Editar", "ERROR: Debe seleccionar la letra del tema que quiere ver ", "OK");
+            await Application.Current.MainPage.DisplayAlert("ATENCIÓN !", "ERROR: Debe seleccionar el tema que quiere ver la letra ", "OK");
+        }
+    }
+
+    private async void ReproducirTemaBtn_Clicked(object sender, EventArgs e)
+    {
+        if (MusicaSeleccionada != null)
+        {
+            await Navigation.PushAsync(new ReproducirTema(MusicaSeleccionada.pista_url));
+        }
+        else
+        {
+            await Application.Current.MainPage.DisplayAlert("ATENCIÓN !", "ERROR: Debe seleccionar el tema musical que quiere escuchar ", "OK");
         }
     }
 }

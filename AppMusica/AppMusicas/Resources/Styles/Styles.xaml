@@ -14,7 +14,7 @@
                     <VisualState x:Name="Selected">
                         <VisualState.Setters>
                             <Setter Property="BackgroundColor"
-                                Value="LightBlue" />
+                                Value="#F7B548" /> 
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -68,7 +68,7 @@
     <Style x:Key="EstiloBoton" TargetType="Button">
 
         <Setter Property="WidthRequest" Value="120"/>
-        <Setter Property="BackgroundColor" Value="#2088FF" />
+        <Setter Property="BackgroundColor" Value="#F48618" />
         <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
         <Setter Property="CornerRadius" Value=" 20"/>
         

@@ -3,12 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMusicas.Views.EditarMusica"
              Title="EditarMusica">
-    <ScrollView>
+    <ScrollView BackgroundColor="#F7B548"  >
 
         <VerticalStackLayout HorizontalOptions="Center" >
             <Label 
-        Text="EDITANDO MUSICA"
-        FontSize="20"
+        Text="EDITANDO MÚSICA"
+        FontSize="Title"
+                FontAttributes="Bold"
         VerticalOptions="Center" 
         HorizontalOptions="Center" />
 

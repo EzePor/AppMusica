@@ -9,9 +9,10 @@ namespace AppMusicas.Views;
 public partial class PaginaDeInicio : ContentPage
 {
     public ObservableCollection<Musica> Musicas { get; set; } = new();
-   
-   
-    
+    RepositoryMusicas repositoryMusicas = new RepositoryMusicas();
+
+
+
     public PaginaDeInicio()
     {
         InitializeComponent();
@@ -19,9 +20,20 @@ public partial class PaginaDeInicio : ContentPage
        
         Musicas= new ObservableCollection<Musica>();
 
+
+        GetAllMusicas(this, EventArgs.Empty);
+
+
+
+    }
+
+    public async void GetAllMusicas(object sender, EventArgs e)
+    {
+        // trae los temas y las asigna 
+
+        Musicas = await repositoryMusicas.GetAllAsync();
+
         carouselView.ItemsSource = Musicas;
-
-
 
     }
     protected override void OnAppearing()
@@ -35,4 +47,6 @@ public partial class PaginaDeInicio : ContentPage
     {
         await Navigation.PopAsync();
     }
+
+    
 }
